@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="/xmlrpc.php">
+<title>Merging data &#8211; Wevergton Adao</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Wevergton Adao &raquo; Feed" href="/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Wevergton Adao &raquo; Comments Feed" href="/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Wevergton Adao &raquo; Merging data Comments Feed" href="/2018/04/01/merging-data/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/mysite\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='latte_bootstrap_css-css'  href='/wp-content/themes/latte/assets/bootstrap/css/bootstrap.min.css?ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='latte_font_awesome-css'  href='/wp-content/themes/latte/assets/font-awesome/css/font-awesome.min.css?ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='latte_style-css'  href='/wp-content/themes/latte/style.css?ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='latte_lora-css'  href='//fonts.googleapis.com/css?family=Lora%3A400%2C700%2C400italic%2C700italic&#038;ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='latte_open_sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C400%2C300%2C600%2C700%2C800&#038;ver=4.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='latte_sanchez-css'  href='//fonts.googleapis.com/css?family=Sanchez%3A400%2C400italic&#038;ver=4.9.4' type='text/css' media='all' />
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Version Control' href='/2018/03/31/version-control/' />
+<link rel='next' title='Credit Card Fraud Detection' href='/2018/04/02/credit-card-fraud-detection/' />
+<meta name="generator" content="WordPress 4.9.4" />
+<link rel="canonical" href="/2018/04/01/merging-data/" />
+<link rel='shortlink' href='/?p=57' />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%2Fmysite%2F2018%2F04%2F01%2Fmerging-data%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%2Fmysite%2F2018%2F04%2F01%2Fmerging-data%2F&#038;format=xml" />
+<style>
+.archive-header {
+	background: transparent url("/wp-content/themes/latte/assets/images/blog.jpg") repeat scroll center center / cover;
+}
+</style>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<link rel="icon" href="/wp-content/uploads/2018/03/W-150x150.png" sizes="32x32" />
+<link rel="icon" href="/wp-content/uploads/2018/03/W.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="/wp-content/uploads/2018/03/W.png" />
+<meta name="msapplication-TileImage" content="http://localhost/mysite/wp-content/uploads/2018/03/W.png" />
+</head>
+<body class="post-template-default single single-post postid-57 single-format-standard pmenu-push">
+
+
+	<div class="preloader"><div class="status">&nbsp;</div></div>
+
+	<div class="site-wrapper">
+
+	
+		<nav class="pmenu pmenu-vertical pmenu-left" id="pmenu">
+			<h3 id="hideLeftPush">Menu <i class="fa fa-arrow-right"></i></h3>
+			<div class="menu-newmenu-container"><ul class="latte-push-menu"><li id="menu-item-83" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-83"><a href="/">Main</a></li>
+<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="/contact/">Contact</a></li>
+</ul></div>		</nav>
+
+		<a id="showLeftPush" class="fa fa-bars"></a>
+
+	
+		<header class="archive-header">
+			<div class="cover-container row">
+				<div class="inner cover col-md-12">
+					<h1 class="cover-heading"><a href="/">Wevergton Adao</a></h1>
+					<p class="lead">Subjects = [&#039;Data Analytics&#039;, &#039;Statistics&#039;, &#039;Business Intelligence&#039;]</p>
+				</div>
+			</div>
+		</header>
+
+		<div class="container blog">
+			<div class="row">
+										<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							 
+											<article id="post-57" class="item post-57 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+			<h1 class="post-title">Merging data</h1>		<div class="post-meta">
+			Published by <a href="/author/admin/">admin</a> on <time>April 1, 2018</time>		</div>
+		<div class="content">
+					<div class="post-thumbnail">
+				<img width="234" height="230" src="/wp-content/uploads/2018/04/merge_post3.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" />			</div>
+					<div class="post-content">
+				<div class="sidebar">
+<div class="container sidebar-sticky"> <span style="font-size: 20px;">Data manipulation is a required stage of data analysis. In some </span>cases<span style="font-size: 20px;"> it might not be the most exciting job, but it is inevitable that you will need to improve your data manipulation skills. Much probably your data has different forms and variety, what demands a lot of hard work. It means, using some techniques that reshape data using the appropriate tool for every situation. It might help you to reduce unnecessary extra work, and let you </span>to<span style="font-size: 20px;"> dedicate more time </span>in<span style="font-size: 20px;"> what really matters: analysis.</span></div>
+</div>
+<div id="notebook" class="border-box-sizing" tabindex="-1">
+<div id="notebook-container" class="container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<p>I work with SAS(R) during some years and I consider the solution #1 for business analytics for many reasons, and one of them is just the robust capacity to manipulate like filter, group, merge, join, etc etc using SQL and/or Data Step.</p>
+<p>I&#8217;m using an article published by <a href="http://www2.sas.com/proceedings/sugi30/249-30.pdf">SAS(R) MERGING vs. JOINING: Comparing the DATA Step with SQL</a> as a guide, without putting too much focus on SQL, at least for now.</p>
+</div>
+<p>Here some examples using Jupyter.</p>
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="n">ONE</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'ID'</span> <span class="p">:[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s1">'NAME'</span> <span class="p">:[</span><span class="s1">'JOE'</span><span class="p">,</span><span class="s1">'EMA'</span><span class="p">,</span><span class="s1">'ANN'</span><span class="p">,</span><span class="s1">'BOB'</span><span class="p">]})</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="n">TWO</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'ID'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="s1">'GENDER'</span> <span class="p">:[</span><span class="s1">'M'</span><span class="p">,</span><span class="s1">'F'</span><span class="p">,</span><span class="s1">'F'</span><span class="p">,</span><span class="s1">'F'</span><span class="p">],</span> <span class="s1">'AGE'</span> <span class="p">:[</span><span class="s1">'18'</span><span class="p">,</span><span class="s1">'21'</span><span class="p">,</span><span class="s1">'19'</span><span class="p">,</span><span class="s1">'24'</span><span class="p">]})</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="c1"># ONEs is a data set with all the information from file ONE along with any corresponding data from file TWO. </span>
+<span class="n">ONEs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ONE</span><span class="p">,</span> <span class="n">TWO</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">'ID'</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">'left'</span><span class="p">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="n">ONEs</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table class="dataframe" border="1">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>ID</th>
+<th>NAME</th>
+<th>AGE</th>
+<th>GENDER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>JOE</td>
+<td>18</td>
+<td>M</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2</td>
+<td>EMA</td>
+<td>21</td>
+<td>F</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3</td>
+<td>ANN</td>
+<td>19</td>
+<td>F</td>
+</tr>
+<tr>
+<th>3</th>
+<td>4</td>
+<td>BOB</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="c1">#  TWOs data set contains all the data from file TWO with any corresponding data from file ONE.</span>
+<span class="n">TWOs</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ONE</span><span class="p">,</span> <span class="n">TWO</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">'ID'</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">'right'</span><span class="p">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="n">TWOs</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table class="dataframe" border="1">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>ID</th>
+<th>NAME</th>
+<th>AGE</th>
+<th>GENDER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>JOE</td>
+<td>18</td>
+<td>M</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2</td>
+<td>EMA</td>
+<td>21</td>
+<td>F</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3</td>
+<td>ANN</td>
+<td>19</td>
+<td>F</td>
+</tr>
+<tr>
+<th>3</th>
+<td>5</td>
+<td>NaN</td>
+<td>24</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="c1">#  allRECS contains all information from ONE and TWO.</span>
+<span class="n">allRECS</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ONE</span><span class="p">,</span> <span class="n">TWO</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">'ID'</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">'outer'</span><span class="p">,</span> <span class="n">indicator</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="n">allRECS</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[9]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table class="dataframe" border="1">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>ID</th>
+<th>NAME</th>
+<th>AGE</th>
+<th>GENDER</th>
+<th>_merge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>JOE</td>
+<td>18</td>
+<td>M</td>
+<td>both</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2</td>
+<td>EMA</td>
+<td>21</td>
+<td>F</td>
+<td>both</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3</td>
+<td>ANN</td>
+<td>19</td>
+<td>F</td>
+<td>both</td>
+</tr>
+<tr>
+<th>3</th>
+<td>4</td>
+<td>BOB</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>left_only</td>
+</tr>
+<tr>
+<th>4</th>
+<td>5</td>
+<td>NaN</td>
+<td>24</td>
+<td>F</td>
+<td>right_only</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="c1">#  inBOTH contains only ID's which had records in both input files. </span>
+<span class="n">inBOTH</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ONE</span><span class="p">,</span> <span class="n">TWO</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">'ID'</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">'inner'</span><span class="p">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="n">inBOTH</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table class="dataframe" border="1">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>ID</th>
+<th>NAME</th>
+<th>AGE</th>
+<th>GENDER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>JOE</td>
+<td>18</td>
+<td>M</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2</td>
+<td>EMA</td>
+<td>21</td>
+<td>F</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3</td>
+<td>ANN</td>
+<td>19</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="c1"># NOmatch1 is a file with data from file TWO that does not match the ID’s from data set ONE </span>
+<span class="n">noMATCH1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ONE</span><span class="p">,</span> <span class="n">TWO</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">'ID'</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">'outer'</span><span class="p">,</span> <span class="n">indicator</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="n">noMATCH1</span> <span class="o">=</span> <span class="n">noMATCH1</span><span class="p">[</span><span class="n">noMATCH1</span><span class="p">[</span><span class="s1">'_merge'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'right_only'</span> <span class="p">]</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="n">noMATCH1</span> <span class="o">=</span> <span class="n">noMATCH1</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'_merge'</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [15]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="n">noMATCH1</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[15]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table class="dataframe" border="1">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>ID</th>
+<th>NAME</th>
+<th>AGE</th>
+<th>GENDER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>4</th>
+<td>5</td>
+<td>NaN</td>
+<td>24</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [16]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="c1"># # NOmatch1 is a file with data from file ONE that does not match the ID’s from data set TWO </span>
+<span class="n">noMATCH2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">ONE</span><span class="p">,</span> <span class="n">TWO</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">'ID'</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span><span class="s1">'outer'</span><span class="p">,</span> <span class="n">indicator</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [17]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="n">noMATCH2</span> <span class="o">=</span> <span class="n">noMATCH2</span><span class="p">[</span><span class="n">noMATCH2</span><span class="p">[</span><span class="s1">'_merge'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'left_only'</span> <span class="p">]</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [18]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="n">noMATCH2</span> <span class="o">=</span> <span class="n">noMATCH2</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'_merge'</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [19]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="n">noMATCH2</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[19]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table class="dataframe" border="1">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>ID</th>
+<th>NAME</th>
+<th>AGE</th>
+<th>GENDER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>3</th>
+<td>4</td>
+<td>BOB</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [20]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="n">noMATCH</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">noMATCH1</span><span class="p">,</span> <span class="n">noMATCH2</span><span class="p">])</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [21]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython2">
+<pre><span class="c1"># NOmatch contains the records not found in inBOTH</span>
+<span class="n">noMATCH</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt output_prompt">Out[21]:</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table class="dataframe" border="1">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>ID</th>
+<th>NAME</th>
+<th>AGE</th>
+<th>GENDER</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>4</th>
+<td>5</td>
+<td>NaN</td>
+<td>24</td>
+<td>F</td>
+</tr>
+<tr>
+<th>3</th>
+<td>4</td>
+<td>BOB</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+			</div>
+						<div class="post-meta">
+				<span>Categories: <a href="/category/uncategorized/" rel="category tag">Uncategorised</a></span>
+				<span></span>
+			</div>
+		</div>
+	</article>
+																<ul class="pager">
+													<li class="previous"><a href="/2018/03/31/version-control/" rel="prev">&larr; Previous</a></li>
+																			<li class="next"><a href="/2018/04/02/credit-card-fraud-detection/" rel="next">Next &rarr;</a></li>
+												</ul>
+										
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2018/04/01/merging-data/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><textarea class="form-control" id="comment" name="comment" cols="45" rows="8" placeholder="Comment" aria-required="true"></textarea></p><p class="comment-form-author"><input class="form-control" id="author" name="author" type="text" placeholder="Name *" value="" size="30"/></p>
+<p class="comment-form-email"><input class="form-control" id="email" name="email" type="text" placeholder="Email *" value="" size="30"/></p>
+<p class="comment-form-url"><input class="form-control" id="url" name="url" type="text" placeholder="Website" value="" size="30" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='57' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>			</form>
+			</div><!-- #respond -->
+	</div>								</div>
+			</div>
+		</div>
+
+
+		<footer class="footer" id="footer">
+			<div class="row">
+				<div class="col-md-12">
+					<p><a target="_blank" href="http://www.hardeepasrani.com/portfolio/latte/">Latte</a><br/>Proudly powered by WordPress</p>				</div>
+			</div>
+		</footer>
+
+	</div>
+<script type='text/javascript' src='/wp-includes/js/comment-reply.min.js?ver=4.9.4'></script>
+<script type='text/javascript' src='/wp-content/themes/latte/assets/bootstrap/js/bootstrap.min.js?ver=4.9.4'></script>
+<script type='text/javascript' src='/wp-content/themes/latte/assets/js/scrollReveal.min.js?ver=4.9.4'></script>
+<script type='text/javascript' src='/wp-content/themes/latte/assets/js/classie.js?ver=4.9.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var latte_script_var = {"latte_preloader_display":"","latte_animations_display":"","latte_is_homepage":"1","latte_parallax_background":"http:\/\/localhost\/mysite\/wp-content\/uploads\/2018\/03\/P1050832-6.jpg","latte_menu_display":"","latte_skills_display":"","latte_services_display":"1","latte_blogposts_display":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/wp-content/themes/latte/assets/js/scripts.js?ver=4.9.4'></script>
+<script type='text/javascript' src='/wp-includes/js/wp-embed.min.js?ver=4.9.4'></script>
+ </body>
+</html>
